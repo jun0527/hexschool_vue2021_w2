@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理頁面</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h1 class="titleL">管理控制台</h1>
+    <form action="index.html" class="addProduct js-addProduct">
+      <h2 class="title">商品建立</h2>
+      <div class="formGroup">
+        <label for="productTitle">商品名稱<span class="productTitle"></span></label>
+        <input type="text" id="productTitle" name="productTitle" class="js-productTitle" placeholder="請輸入商品名稱">
+      </div>
+      <div class="formGroup">
+        <label for="category">商品分類<span class="category"></span></label>
+        <select name="category" id="category" name="category" class="js-category">
+          <option value="" selected disabled>請選擇分類</option>
+          <option value="蛋糕">蛋糕</option>
+          <option value="餅乾">餅乾</option>
+          <option value="泡芙">泡芙</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="formGroup">
+        <label for="imageUrl">商品圖片<span class="imageUrl"></span></label>
+        <input type="text" id="imageUrl" name="imageUrl" class="js-imageUrl" placeholder="請輸入圖片網址">
+      </div>
+      <div class="formGroup">
+        <label for="description">商品描述<span class="description"></span></label>
+        <textarea type="text" id="description" name="description" class="js-description"
+          placeholder="請輸入商品描述"></textarea>
+      </div>
+      <div class="priceArea">
+        <div class="formGroup">
+          <label for="originPrice">原價<span class="originPrice"></span></label>
+          <input type="text" id="originPrice" name="originPrice" class="js-originPrice" placeholder="請輸入原價">
+        </div>
+        <div class="formGroup">
+          <label for="price">售價<span class="price"></span></label>
+          <input type="text" id="price" name="price" class="js-price" placeholder="請輸入售價">
+        </div>
+        <div class="formGroup">
+          <label for="unit">單位<span class="unit"></span></label>
+          <input type="text" id="unit" name="unit" class="js-unit" placeholder="請輸入單位(如：個)">
+        </div>
+      </div>
+      <div class="formGroup">
+        <button type="button" class="btn js-addProductBtn">建立</button>
+      </div>
+    </form>
+    <h2 class="title">商品列表</h2>
+    <table class="productListArea">
+      <thead>
+        <tr>
+          <th width="25%">商品名稱</th>
+          <th width="15%">商品分類</th>
+          <th width="15%">原價</th>
+          <th width="15%">售價</th>
+          <th width="15%">是否啟用</th>
+          <th width="15%">刪除</th>
+        </tr>
+      </thead>
+      <tbody class="productList js-productList"></tbody>
+    </table>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="/js/all.js"></script>
+</body>
+
+</html>

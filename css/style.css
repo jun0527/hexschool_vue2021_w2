@@ -1,0 +1,189 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* layout */
+body{
+  font-family: "Microsoft JhengHei";
+  line-height: 1.5;
+}
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+.wrap button{
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.formGroup input,.formGroup button,.formGroup select,.formGroup textarea{
+  width: 100%;
+  height: 38px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  margin: 5px 0;
+}
+/* signIn */
+.signIn{
+  width: 280px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  padding: 20px 15px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.signIn h1{
+  font-size: 24px;
+  text-align: center;
+}
+.formGroup .btn{
+  height: 48px;
+  background: #0080FF;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+}
+.formGroup button:hover{
+  background: #0066CC;
+}
+/* index.html */
+.titleL{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.addProduct{
+  width: 550px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  padding: 20px 15px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.title{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.formGroup label span{
+  color: red;
+  font-size: 12px;
+  margin: 0 5px;
+}
+.formGroup textarea{
+  height: 60px;
+  resize: none;
+}
+.priceArea{
+  display: flex;
+  justify-content: space-between;
+}
+.priceArea .formGroup{
+  width: 32%;
+}
+.productListArea{
+  width: 90%;
+  margin: 0 auto 40px auto;
+}
+.productListArea th, .productListArea tr{
+  line-height: 48px;
+  border-bottom: 1px solid #000; 
+}
+.productListArea th{
+  font-weight: bold;
+  text-align: left;
+}
+.productList tr:hover{
+  background: #F0F0F0;
+}
+/* 滑動開關 */
+.checkbox{
+  position: absolute;
+  display: none;
+}
+.btnWrap{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  vertical-align:middle;
+  background:rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 2px 3px -2px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
+}
+.btnInside{
+  position: absolute;
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 2px 3px;
+  box-shadow: -3px 3px 5px -2px rgba(0, 0, 0, 0.5);
+}
+.checkbox:checked ~ .btnWrap{
+  background: #0080FF;
+}
+.checkbox:checked ~* .btnInside{
+  margin-left: 20px;
+}
+.productList .deleteBtn{
+  color: #fff;
+  background: #FF5151;
+  font-weight: normal;
+}
+.deleteBtn:hover{
+  background: #c23c3c;
+}
